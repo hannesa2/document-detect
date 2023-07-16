@@ -8,7 +8,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 33
     }
 
@@ -17,6 +17,10 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     buildFeatures {
@@ -28,7 +32,7 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    api 'com.github.MikeOrtiz:TouchImageView:3.2.1'
+    api 'com.github.MikeOrtiz:TouchImageView:3.4'
     api 'com.github.AppDevNext.Logcat:LogcatCoreLib:2.12'
     // The source code of OpenCV is here https://git.mxtracks.info/opencv/openCV-android-sdk
     // The code was too big for github, but the main problem was jitpack.io was not able to build
